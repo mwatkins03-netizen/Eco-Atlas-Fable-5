@@ -1,0 +1,896 @@
+{
+  "locations": [
+    {
+      "id": "mississippi",
+      "title": "Mississippi River Corridor",
+      "country": "United States",
+      "coords": [
+        34.7465,
+        -92.2896
+      ],
+      "tags": [
+        "rivers",
+        "voices",
+        "archives"
+      ],
+      "theme": "Trade & Travel",
+      "summary": "A living corridor of river commerce, floodplain ecologies, blues traditions, and contested environmental memory.",
+      "quote": "Follow how water moves goods, music, memory, and people.",
+      "timeline": [
+        {
+          "year": "1200 CE",
+          "title": "Mississippian settlements",
+          "detail": "Large Indigenous settlements flourished along tributaries and floodplains, shaping trade and agriculture."
+        },
+        {
+          "year": "1830 CE",
+          "title": "Steamboat era",
+          "detail": "Steamboats changed commerce and communication, while also accelerating plantation economies and displacement."
+        },
+        {
+          "year": "1927",
+          "title": "Great Flood",
+          "detail": "The flood reshaped engineering, migration, and racial politics across the region."
+        },
+        {
+          "year": "Present",
+          "title": "Restoration and resilience",
+          "detail": "Communities now grapple with levees, wetland loss, pollution, and flood adaptation."
+        }
+      ],
+      "species": [
+        {
+          "name": "Paddlefish",
+          "scientificName": "Polyodon spathula",
+          "gbifKey": 5212833,
+          "kingdom": "Animalia",
+          "class": null,
+          "family": "Polyodontidae",
+          "localRecordsAtBuild": 296
+        },
+        {
+          "name": "Cypress",
+          "scientificName": "Taxodium distichum",
+          "gbifKey": 2684191,
+          "kingdom": "Plantae",
+          "class": "Pinopsida",
+          "family": "Cupressaceae",
+          "localRecordsAtBuild": 5093
+        },
+        {
+          "name": "Great blue heron",
+          "scientificName": "Ardea herodias",
+          "gbifKey": 9630752,
+          "kingdom": "Animalia",
+          "class": "Aves",
+          "family": "Ardeidae",
+          "localRecordsAtBuild": 534901
+        }
+      ],
+      "activities": [
+        "compare-river",
+        "field-notes",
+        "archive-hunt"
+      ],
+      "bbox": [
+        29.0,
+        37.5,
+        -95.0,
+        -88.0
+      ]
+    },
+    {
+      "id": "yukon",
+      "title": "Yukon River Basin",
+      "country": "United States / Canada",
+      "coords": [
+        64.8378,
+        -147.7164
+      ],
+      "tags": [
+        "rivers",
+        "then-now"
+      ],
+      "theme": "People & Salmon",
+      "summary": "Observe relationships among salmon runs, Indigenous knowledge, climate shifts, and northern mobility.",
+      "quote": "Cold water stories reveal how ecosystems and culture move together.",
+      "timeline": [
+        {
+          "year": "Long-term",
+          "title": "Seasonal migration and fishing",
+          "detail": "Communities across the basin have long organized life around river travel and salmon."
+        },
+        {
+          "year": "1896",
+          "title": "Klondike gold rush",
+          "detail": "New extractive economies transformed labor, mobility, and river settlements."
+        },
+        {
+          "year": "Present",
+          "title": "Climate pressure",
+          "detail": "Warmer temperatures and changing river conditions affect fish populations and food systems."
+        }
+      ],
+      "species": [
+        {
+          "name": "Chinook salmon",
+          "scientificName": "Oncorhynchus tshawytscha",
+          "gbifKey": 5204024,
+          "kingdom": "Animalia",
+          "class": null,
+          "family": "Salmonidae",
+          "localRecordsAtBuild": 1214
+        },
+        {
+          "name": "Willow ptarmigan",
+          "scientificName": "Lagopus lagopus",
+          "gbifKey": 2473421,
+          "kingdom": "Animalia",
+          "class": "Aves",
+          "family": "Phasianidae",
+          "localRecordsAtBuild": 15368
+        },
+        {
+          "name": "Black spruce",
+          "scientificName": "Picea mariana",
+          "gbifKey": 5284802,
+          "kingdom": "Plantae",
+          "class": "Pinopsida",
+          "family": "Pinaceae",
+          "localRecordsAtBuild": 735
+        }
+      ],
+      "activities": [
+        "compare-river",
+        "species-story",
+        "eco-timeline"
+      ],
+      "bbox": [
+        60.0,
+        68.5,
+        -165.0,
+        -132.0
+      ]
+    },
+    {
+      "id": "great-lakes",
+      "title": "Great Lakes Watershed",
+      "country": "United States / Canada",
+      "coords": [
+        44.3148,
+        -85.6024
+      ],
+      "tags": [
+        "voices",
+        "rivers",
+        "notes"
+      ],
+      "theme": "Water Stories",
+      "summary": "Trace industrial history, freshwater stewardship, and cross-border ecological identity across the Great Lakes.",
+      "quote": "Ask who gets to define a healthy lake.",
+      "timeline": [
+        {
+          "year": "Pre-contact",
+          "title": "Trade networks",
+          "detail": "Waterways connected extensive Indigenous trade and kinship networks."
+        },
+        {
+          "year": "1972",
+          "title": "Clean Water era",
+          "detail": "Public attention to pollution transformed conservation and governance."
+        },
+        {
+          "year": "Present",
+          "title": "Invasive species and stewardship",
+          "detail": "Students can compare ecological repair with ongoing threats."
+        }
+      ],
+      "species": [
+        {
+          "name": "Lake sturgeon",
+          "scientificName": "Acipenser fulvescens",
+          "gbifKey": 2402120,
+          "kingdom": "Animalia",
+          "class": null,
+          "family": "Acipenseridae",
+          "localRecordsAtBuild": 621
+        },
+        {
+          "name": "Wild rice",
+          "scientificName": "Zizania palustris",
+          "gbifKey": 2703230,
+          "kingdom": "Plantae",
+          "class": "Liliopsida",
+          "family": "Poaceae",
+          "localRecordsAtBuild": 619
+        },
+        {
+          "name": "Piping plover",
+          "scientificName": "Charadrius melodus",
+          "gbifKey": 2480283,
+          "kingdom": "Animalia",
+          "class": "Aves",
+          "family": "Charadriidae",
+          "localRecordsAtBuild": 32427
+        },
+        {
+          "name": "Monarch butterfly",
+          "scientificName": "Danaus plexippus",
+          "gbifKey": 5133088,
+          "kingdom": "Animalia",
+          "class": "Insecta",
+          "family": "Nymphalidae",
+          "localRecordsAtBuild": 161848
+        },
+        {
+          "name": "Common milkweed",
+          "scientificName": "Asclepias syriaca",
+          "gbifKey": 3170247,
+          "kingdom": "Plantae",
+          "class": "Magnoliopsida",
+          "family": "Apocynaceae",
+          "localRecordsAtBuild": 46634
+        }
+      ],
+      "activities": [
+        "field-notes",
+        "archive-hunt",
+        "compare-river"
+      ],
+      "bbox": [
+        41.0,
+        49.0,
+        -93.0,
+        -76.0
+      ]
+    },
+    {
+      "id": "everglades",
+      "title": "Everglades",
+      "country": "United States",
+      "coords": [
+        25.2866,
+        -80.8987
+      ],
+      "tags": [
+        "species",
+        "then-now"
+      ],
+      "theme": "Living Wetlands",
+      "summary": "Map a slow-moving river of grass and examine water engineering, habitat change, and wetland restoration.",
+      "quote": "Wetlands are stories told in slow water.",
+      "timeline": [
+        {
+          "year": "Long-term",
+          "title": "Wetland lifeways",
+          "detail": "The ecosystem supported diverse species and human communities adapted to seasonal water flows."
+        },
+        {
+          "year": "1900s",
+          "title": "Drainage and development",
+          "detail": "Canals and land conversion altered water movement and habitat."
+        },
+        {
+          "year": "Present",
+          "title": "Restoration",
+          "detail": "Current projects attempt to recover water flow and biodiversity."
+        }
+      ],
+      "species": [
+        {
+          "name": "Roseate spoonbill",
+          "scientificName": "Platalea ajaja",
+          "gbifKey": 2480803,
+          "kingdom": "Animalia",
+          "class": "Aves",
+          "family": "Threskiornithidae",
+          "localRecordsAtBuild": 65181
+        },
+        {
+          "name": "Alligator",
+          "scientificName": "Alligator mississippiensis",
+          "gbifKey": 2441370,
+          "kingdom": "Animalia",
+          "class": "Crocodylia",
+          "family": "Alligatoridae",
+          "localRecordsAtBuild": 14894
+        },
+        {
+          "name": "Sawgrass",
+          "scientificName": "Cladium jamaicense",
+          "gbifKey": 2731343,
+          "kingdom": "Plantae",
+          "class": "Liliopsida",
+          "family": "Cyperaceae",
+          "localRecordsAtBuild": 66
+        }
+      ],
+      "activities": [
+        "species-story",
+        "eco-timeline"
+      ],
+      "bbox": [
+        24.5,
+        27.2,
+        -82.0,
+        -80.0
+      ]
+    },
+    {
+      "id": "sonoran",
+      "title": "Sonoran Desert",
+      "country": "United States / Mexico",
+      "coords": [
+        32.2217,
+        -110.9265
+      ],
+      "tags": [
+        "species",
+        "routes"
+      ],
+      "theme": "Resilience & Adaptation",
+      "summary": "Explore desert ecologies, border movement, and the knowledge needed to survive arid landscapes.",
+      "quote": "A desert is not empty; it is full of relations.",
+      "timeline": [
+        {
+          "year": "Long-term",
+          "title": "Indigenous desert knowledge",
+          "detail": "Communities cultivated plant knowledge and survival strategies in the desert."
+        },
+        {
+          "year": "1900s",
+          "title": "Border infrastructures",
+          "detail": "New infrastructures altered mobility and ecosystems."
+        },
+        {
+          "year": "Present",
+          "title": "Heat and adaptation",
+          "detail": "Climate pressures raise questions about water, migration, and sustainability."
+        }
+      ],
+      "species": [
+        {
+          "name": "Saguaro cactus",
+          "scientificName": "Carnegiea gigantea",
+          "gbifKey": 5384200,
+          "kingdom": "Plantae",
+          "class": "Magnoliopsida",
+          "family": "Cactaceae",
+          "localRecordsAtBuild": 49616
+        },
+        {
+          "name": "Gila monster",
+          "scientificName": "Heloderma suspectum",
+          "gbifKey": 2460817,
+          "kingdom": "Animalia",
+          "class": "Squamata",
+          "family": "Helodermatidae",
+          "localRecordsAtBuild": 2593
+        },
+        {
+          "name": "Desert tortoise",
+          "scientificName": "Gopherus morafkai",
+          "gbifKey": 7704598,
+          "kingdom": "Animalia",
+          "class": "Testudines",
+          "family": "Testudinidae",
+          "localRecordsAtBuild": 1624
+        }
+      ],
+      "activities": [
+        "species-story",
+        "trace-routes"
+      ],
+      "bbox": [
+        28.0,
+        34.5,
+        -116.0,
+        -108.5
+      ]
+    },
+    {
+      "id": "mekong",
+      "title": "Mekong Delta",
+      "country": "Vietnam",
+      "coords": [
+        10.0452,
+        105.7469
+      ],
+      "tags": [
+        "rivers",
+        "notes",
+        "voices"
+      ],
+      "theme": "Delta Livelihoods",
+      "summary": "Study rice agriculture, fisheries, sea-level rise, and local adaptation in a dynamic delta landscape.",
+      "quote": "A delta asks students to think about water, labor, and vulnerability together.",
+      "timeline": [
+        {
+          "year": "Long-term",
+          "title": "River livelihoods",
+          "detail": "Communities organized life around fisheries, transport, and rice cultivation."
+        },
+        {
+          "year": "20th century",
+          "title": "War and reconstruction",
+          "detail": "Conflict and rebuilding changed settlement and infrastructure."
+        },
+        {
+          "year": "Present",
+          "title": "Sea-level rise",
+          "detail": "Salinity and climate stress now shape agriculture and migration."
+        }
+      ],
+      "species": [
+        {
+          "name": "Lotus",
+          "scientificName": "Nelumbo nucifera",
+          "gbifKey": 2882449,
+          "kingdom": "Plantae",
+          "class": "Magnoliopsida",
+          "family": "Nelumbonaceae",
+          "localRecordsAtBuild": 105
+        },
+        {
+          "name": "Mekong catfish",
+          "scientificName": "Pangasianodon gigas",
+          "gbifKey": 2340710,
+          "kingdom": "Animalia",
+          "class": null,
+          "family": "Pangasiidae",
+          "localRecordsAtBuild": 0
+        },
+        {
+          "name": "Mangrove",
+          "scientificName": "Rhizophora apiculata",
+          "gbifKey": 3086526,
+          "kingdom": "Plantae",
+          "class": "Magnoliopsida",
+          "family": "Rhizophoraceae",
+          "localRecordsAtBuild": 2771
+        }
+      ],
+      "activities": [
+        "field-notes",
+        "compare-river",
+        "eco-timeline"
+      ],
+      "bbox": [
+        8.5,
+        11.5,
+        104.0,
+        107.2
+      ]
+    },
+    {
+      "id": "amazon",
+      "title": "Amazon Basin",
+      "country": "Brazil / Peru / Colombia",
+      "coords": [
+        -3.4653,
+        -62.2159
+      ],
+      "tags": [
+        "species",
+        "routes",
+        "voices"
+      ],
+      "theme": "Forest Worlds",
+      "summary": "Interrogate forest biodiversity, river travel, extractive frontiers, and community knowledge.",
+      "quote": "Biodiversity becomes meaningful when tied to the lives that sustain it.",
+      "timeline": [
+        {
+          "year": "Long-term",
+          "title": "Forest stewardship",
+          "detail": "Indigenous communities have long shaped and managed forest environments."
+        },
+        {
+          "year": "20th century",
+          "title": "Extraction booms",
+          "detail": "Rubber, timber, and mining transformed ecologies and labor."
+        },
+        {
+          "year": "Present",
+          "title": "Deforestation debates",
+          "detail": "Students can compare conservation, development, and sovereignty narratives."
+        }
+      ],
+      "species": [
+        {
+          "name": "Jaguar",
+          "scientificName": "Panthera onca",
+          "gbifKey": 5219426,
+          "kingdom": "Animalia",
+          "class": "Mammalia",
+          "family": "Felidae",
+          "localRecordsAtBuild": 7032
+        },
+        {
+          "name": "Kapok tree",
+          "scientificName": "Ceiba pentandra",
+          "gbifKey": 5406697,
+          "kingdom": "Plantae",
+          "class": "Magnoliopsida",
+          "family": "Malvaceae",
+          "localRecordsAtBuild": 101
+        },
+        {
+          "name": "Macaw",
+          "scientificName": "Ara macao",
+          "gbifKey": 5959227,
+          "kingdom": "Animalia",
+          "class": "Aves",
+          "family": "Psittacidae",
+          "localRecordsAtBuild": 12530
+        }
+      ],
+      "activities": [
+        "species-story",
+        "trace-routes",
+        "field-notes"
+      ],
+      "bbox": [
+        -10.0,
+        2.0,
+        -73.0,
+        -55.0
+      ]
+    },
+    {
+      "id": "maasai",
+      "title": "Maasai Mara",
+      "country": "Kenya",
+      "coords": [
+        -1.4061,
+        35.0422
+      ],
+      "tags": [
+        "species",
+        "routes"
+      ],
+      "theme": "Migration & Grasslands",
+      "summary": "Follow seasonal migrations, pastoral landscapes, and tourism’s influence on ecological storytelling.",
+      "quote": "Movement is one of the ecosystem’s central languages.",
+      "timeline": [
+        {
+          "year": "Long-term",
+          "title": "Pastoral knowledge",
+          "detail": "Pastoral communities managed movement, water, and grazing across grasslands."
+        },
+        {
+          "year": "20th century",
+          "title": "Protected areas",
+          "detail": "Conservation models changed land use and access."
+        },
+        {
+          "year": "Present",
+          "title": "Migration corridors",
+          "detail": "Students can study tourism, species movement, and land pressure."
+        }
+      ],
+      "species": [
+        {
+          "name": "Wildebeest",
+          "scientificName": "Connochaetes taurinus",
+          "gbifKey": 2441105,
+          "kingdom": "Animalia",
+          "class": "Mammalia",
+          "family": "Bovidae",
+          "localRecordsAtBuild": 2665
+        },
+        {
+          "name": "Acacia",
+          "scientificName": "Vachellia tortilis",
+          "gbifKey": 3974700,
+          "kingdom": "Plantae",
+          "class": "Magnoliopsida",
+          "family": "Fabaceae",
+          "localRecordsAtBuild": 121
+        },
+        {
+          "name": "Lion",
+          "scientificName": "Panthera leo",
+          "gbifKey": 5219404,
+          "kingdom": "Animalia",
+          "class": "Mammalia",
+          "family": "Felidae",
+          "localRecordsAtBuild": 3884
+        }
+      ],
+      "activities": [
+        "trace-routes",
+        "species-story"
+      ],
+      "bbox": [
+        -3.2,
+        -0.5,
+        34.0,
+        36.5
+      ]
+    },
+    {
+      "id": "arctic",
+      "title": "Arctic Tundra",
+      "country": "Circumpolar North",
+      "coords": [
+        68.3476,
+        18.9993
+      ],
+      "tags": [
+        "then-now",
+        "voices"
+      ],
+      "theme": "Ice, Memory, and Change",
+      "summary": "Compare traditional ecological knowledge with contemporary climate observations across the far north.",
+      "quote": "The Arctic makes long-duration change visible.",
+      "timeline": [
+        {
+          "year": "Long-term",
+          "title": "Seasonal knowledge",
+          "detail": "Travel, hunting, and survival depended on deep knowledge of ice, wind, and animals."
+        },
+        {
+          "year": "20th century",
+          "title": "Extraction and military infrastructures",
+          "detail": "Cold war and extraction projects altered landscapes and mobility."
+        },
+        {
+          "year": "Present",
+          "title": "Rapid warming",
+          "detail": "The region offers powerful evidence of climate change and adaptation."
+        }
+      ],
+      "species": [
+        {
+          "name": "Caribou",
+          "scientificName": "Rangifer tarandus",
+          "gbifKey": 5220114,
+          "kingdom": "Animalia",
+          "class": "Mammalia",
+          "family": "Cervidae",
+          "localRecordsAtBuild": 2111
+        },
+        {
+          "name": "Arctic fox",
+          "scientificName": "Vulpes lagopus",
+          "gbifKey": 5219303,
+          "kingdom": "Animalia",
+          "class": "Mammalia",
+          "family": "Canidae",
+          "localRecordsAtBuild": 180
+        },
+        {
+          "name": "Lichen",
+          "scientificName": "Cladonia rangiferina",
+          "gbifKey": 8597577,
+          "kingdom": "Fungi",
+          "class": "Lecanoromycetes",
+          "family": "Cladoniaceae",
+          "localRecordsAtBuild": 1180
+        }
+      ],
+      "activities": [
+        "eco-timeline",
+        "field-notes"
+      ],
+      "bbox": [
+        66.0,
+        70.0,
+        15.0,
+        25.0
+      ]
+    },
+    {
+      "id": "ganges",
+      "title": "Ganges Delta",
+      "country": "India / Bangladesh",
+      "coords": [
+        22.5726,
+        88.3639
+      ],
+      "tags": [
+        "rivers",
+        "archives",
+        "voices"
+      ],
+      "theme": "Sacred Waters & Urban Change",
+      "summary": "Track floodplains, pilgrimage, urbanization, and environmental vulnerability in a densely inhabited river system.",
+      "quote": "Sacred landscapes are also lived infrastructures.",
+      "timeline": [
+        {
+          "year": "Long-term",
+          "title": "River cities",
+          "detail": "Rivers supported trade, pilgrimage, and agriculture for centuries."
+        },
+        {
+          "year": "Colonial period",
+          "title": "Ports and power",
+          "detail": "Colonial infrastructures and commerce reshaped river cities and labor."
+        },
+        {
+          "year": "Present",
+          "title": "Flood risk and urban density",
+          "detail": "Students can study crowding, sanitation, and climate resilience."
+        }
+      ],
+      "species": [
+        {
+          "name": "Hilsa shad",
+          "scientificName": "Tenualosa ilisha",
+          "gbifKey": 2413382,
+          "kingdom": "Animalia",
+          "class": null,
+          "family": "Clupeidae",
+          "localRecordsAtBuild": 346
+        },
+        {
+          "name": "Sundari mangrove",
+          "scientificName": "Heritiera fomes",
+          "gbifKey": 11005100,
+          "kingdom": "Plantae",
+          "class": "Magnoliopsida",
+          "family": "Malvaceae",
+          "localRecordsAtBuild": 12
+        },
+        {
+          "name": "River dolphin",
+          "scientificName": "Platanista gangetica",
+          "gbifKey": 2440764,
+          "kingdom": "Animalia",
+          "class": "Mammalia",
+          "family": "Platanistidae",
+          "localRecordsAtBuild": 96
+        }
+      ],
+      "activities": [
+        "compare-river",
+        "archive-hunt",
+        "field-notes"
+      ],
+      "bbox": [
+        21.0,
+        24.5,
+        87.0,
+        91.0
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "monarch-route",
+      "name": "Monarch Migration",
+      "description": "A seasonal journey connecting Canada, the United States, and Mexico.",
+      "points": [
+        [
+          45.4215,
+          -75.6972
+        ],
+        [
+          41.8781,
+          -87.6298
+        ],
+        [
+          29.4241,
+          -98.4936
+        ],
+        [
+          19.4326,
+          -99.1332
+        ]
+      ]
+    },
+    {
+      "id": "great-migration",
+      "name": "The Great Migration",
+      "description": "Movement of Black Americans from the rural South to northern and western cities.",
+      "points": [
+        [
+          33.5186,
+          -86.8104
+        ],
+        [
+          35.1495,
+          -90.049
+        ],
+        [
+          41.8781,
+          -87.6298
+        ],
+        [
+          40.7128,
+          -74.006
+        ],
+        [
+          34.0522,
+          -118.2437
+        ]
+      ]
+    },
+    {
+      "id": "wildebeest-route",
+      "name": "Wildebeest Migration",
+      "description": "Seasonal movement across the Serengeti-Mara ecosystem.",
+      "points": [
+        [
+          -2.3333,
+          34.8333
+        ],
+        [
+          -1.6,
+          35.2
+        ],
+        [
+          -1.15,
+          35.1
+        ],
+        [
+          -2.0,
+          34.9
+        ]
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "compare-river",
+      "title": "Compare a river across centuries",
+      "subtitle": "See how rivers change over time—and why.",
+      "image": "assets/images/activity-river.png",
+      "color": "sage"
+    },
+    {
+      "id": "trace-routes",
+      "title": "Trace migration paths",
+      "subtitle": "Follow journeys of people, animals, and ideas.",
+      "image": "assets/images/activity-routes.png",
+      "color": "lavender"
+    },
+    {
+      "id": "species-story",
+      "title": "Map a local species story",
+      "subtitle": "Investigate habitat, relation, and change.",
+      "image": "assets/images/activity-species.png",
+      "color": "peach"
+    },
+    {
+      "id": "field-notes",
+      "title": "Read community field notes",
+      "subtitle": "Collect observations and community knowledge.",
+      "image": "assets/images/activity-notes.png",
+      "color": "sky"
+    },
+    {
+      "id": "eco-timeline",
+      "title": "Build an eco timeline",
+      "subtitle": "Connect events, ecology, and culture through time.",
+      "image": "assets/images/activity-timeline.png",
+      "color": "gold"
+    },
+    {
+      "id": "archive-hunt",
+      "title": "Archive scavenger hunt",
+      "subtitle": "Use maps, records, and questions to uncover hidden histories.",
+      "image": "assets/images/activity-archive.png",
+      "color": "sage"
+    }
+  ],
+  "meta": {
+    "version": "2.0",
+    "updated": "2026-07-25",
+    "dataSources": [
+      {
+        "name": "GBIF — Global Biodiversity Information Facility",
+        "url": "https://www.gbif.org",
+        "api": "https://api.gbif.org/v1",
+        "license": "Varies by dataset; each record carries its own license",
+        "note": "Live occurrence, taxonomy, and media records are fetched from the public GBIF API at runtime. No API key or account is required."
+      },
+      {
+        "name": "OpenStreetMap",
+        "url": "https://www.openstreetmap.org/copyright",
+        "license": "ODbL",
+        "note": "Base map tiles."
+      }
+    ]
+  }
+}

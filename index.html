@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Ethnography Atlas — time, place, and living landscapes</title>
+  <meta name="description" content="A student-facing atlas of place-based inquiry. Explore ecology, community, memory, and archives, and investigate live biodiversity records from GBIF." />
+  <link rel="icon" href="assets/icons/logo-landscape.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#explore">Skip to the atlas</a>
+
+  <div class="page-shell">
+    <header class="site-header panel panel--header">
+      <a class="brand" href="#top">
+        <img src="assets/icons/logo-landscape.svg" alt="" class="brand__logo">
+        <span>
+          <span class="brand__title">Eco Ethnography Atlas</span>
+          <span class="brand__subtitle">Time, place, and living landscapes</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="#explore">Explore</a>
+        <a href="#activities">Activities</a>
+        <a href="#studio">Studio</a>
+        <a href="#notebook">Notebook</a>
+        <a href="#sources">Sources</a>
+      </nav>
+      <div class="header-actions">
+        <button id="a11yButton" class="icon-button" aria-label="Display and motion settings" aria-expanded="false" aria-controls="a11yMenu" title="Display and motion settings">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+        </button>
+        <a class="button button--dark" href="#studio">Start exploring</a>
+      </div>
+      <div id="a11yMenu" class="a11y-menu" hidden>
+        <h3>Display settings</h3>
+        <label><input type="checkbox" id="toggleMotion"> Pause background video</label>
+        <label><input type="checkbox" id="toggleContrast"> High contrast text</label>
+        <label><input type="checkbox" id="toggleLargeText"> Larger type</label>
+        <p class="a11y-menu__note">Settings save to this browser only.</p>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ================================================== HERO -->
+      <section class="hero panel">
+        <div class="hero__backdrop">
+          <video id="heroVideo"
+                 class="hero__video"
+                 autoplay muted loop playsinline
+                 preload="auto"
+                 poster="media/atlas-loop-poster.jpg"
+                 aria-hidden="true"
+                 tabindex="-1">
+            <source src="media/atlas-loop.mp4" type="video/mp4">
+          </video>
+          <img class="hero__still" src="media/atlas-loop-poster.jpg" alt="" />
+        </div>
+        <div class="hero__overlay"></div>
+
+        <button id="videoToggle" class="video-toggle" aria-pressed="false">
+          <span class="video-toggle__icon" aria-hidden="true">❚❚</span>
+          <span class="video-toggle__label">Pause background</span>
+        </button>
+
+        <div class="hero__content">
+          <div class="hero__copy">
+            <p class="eyebrow">Place-based inquiry for students and faculty</p>
+            <h1>Travel through time, place, and living landscapes</h1>
+            <p class="lead">
+              Choose a place. Ask what changed, who remembers it, and what lives there now.
+              Then check your thinking against <strong>live biodiversity records from GBIF</strong>—
+              the same open data scientists use.
+            </p>
+            <div class="hero__actions">
+              <a href="#studio" class="button button--dark">Begin the journey <img src="assets/icons/icon-arrow.svg" alt=""></a>
+              <a href="#how-it-works" class="button button--light">How this works</a>
+            </div>
+            <div class="trusted-row">
+              <div class="avatars">
+                <img src="assets/icons/avatar-a.svg" alt="">
+                <img src="assets/icons/avatar-b.svg" alt="">
+                <img src="assets/icons/avatar-c.svg" alt="">
+              </div>
+              <div>
+                <div class="trusted-row__number">10 regions · 6 activities · live GBIF data</div>
+                <div class="trusted-row__label">No account, no tracking, notes stay in your browser</div>
+              </div>
+            </div>
+          </div>
+          <aside class="hero__aside" aria-label="Atlas layers">
+            <div class="feature-stack">
+              <button class="feature-chip feature-chip--green" data-jump-activity="compare-river"><img src="assets/icons/icon-clock.svg" alt=""><span><strong>Then &amp; Now</strong><small>Compare a place across time</small></span></button>
+              <button class="feature-chip feature-chip--purple" data-jump-activity="field-notes"><img src="assets/icons/icon-notes.svg" alt=""><span><strong>Field Notes</strong><small>Observation and reflection tools</small></span></button>
+              <button class="feature-chip feature-chip--peach" data-jump-activity="species-story"><img src="assets/icons/icon-leaf.svg" alt=""><span><strong>Species</strong><small>Live records, photos, and range</small></span></button>
+              <button class="feature-chip feature-chip--blue" data-jump-activity="archive-hunt"><img src="assets/icons/icon-voices.svg" alt=""><span><strong>Evidence</strong><small>Sources, citations, and gaps</small></span></button>
+              <button class="feature-chip feature-chip--yellow" data-jump-activity="trace-routes"><img src="assets/icons/icon-route.svg" alt=""><span><strong>Routes</strong><small>Journeys of people and species</small></span></button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ================================================== HOW IT WORKS -->
+      <section id="how-it-works" class="howto panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Start here</p>
+            <h2>Four steps, about 30–45 minutes</h2>
+            <p>You do not need an account. Your notes are saved in this browser and never sent anywhere until you export them yourself.</p>
+          </div>
+        </div>
+        <ol class="howto-steps">
+          <li><span class="howto-steps__num">1</span><strong>Pick a place</strong><span>Use the map or the place list below. Every marker has a matching card, so you never need the map to get there.</span></li>
+          <li><span class="howto-steps__num">2</span><strong>Open an activity</strong><span>Six activities turn the place into a question. Each one tells you exactly what to do and what to produce.</span></li>
+          <li><span class="howto-steps__num">3</span><strong>Check it against real data</strong><span>Species and evidence activities pull live records from GBIF, with the source, date, and license attached.</span></li>
+          <li><span class="howto-steps__num">4</span><strong>Write and export</strong><span>Save field notes as you go, then export a formatted report to hand in as HTML, PDF, or JSON.</span></li>
+        </ol>
+      </section>
+
+      <!-- ================================================== ATLAS -->
+      <section id="explore" class="atlas-browser panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Step 1 · Atlas explorer</p>
+            <h2>Choose a place to investigate</h2>
+            <p>Filter by theme, then select a place on the map or from the list. The panel on the right loads that place's story, timeline, and live biodiversity summary.</p>
+          </div>
+          <div class="filters" id="filterChips" role="group" aria-label="Filter places by theme"></div>
+        </div>
+
+        <div class="browser-grid">
+          <div class="map-panel panel panel--inner">
+            <div class="map-toolbar">
+              <div class="map-toolbar__group" role="group" aria-label="Map layers">
+                <button id="toggleOccurrences" class="chip-toggle" aria-pressed="false">Show GBIF records on map</button>
+                <button id="clearRoutesButton" class="chip-toggle">Clear routes</button>
+              </div>
+              <p class="map-toolbar__hint" id="mapStatus" role="status" aria-live="polite">Select a place to begin.</p>
+            </div>
+            <div id="atlasMap" role="application" aria-label="World map of atlas locations"></div>
+            <p class="map-caption">
+              Base map © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors.
+              Occurrence points © the publishing institutions, via <a href="https://www.gbif.org" target="_blank" rel="noopener">GBIF</a>.
+              <a href="#placeList">Skip the map and use the place list instead.</a>
+            </p>
+          </div>
+
+          <div class="detail-panel">
+            <div id="locationDetail" class="detail-card panel panel--inner" aria-live="polite"></div>
+            <div class="detail-card panel panel--inner detail-card--secondary">
+              <div class="detail-card__title-row">
+                <h3>What lives here now</h3>
+                <button id="refreshLive" class="button button--ghost button--small">Refresh</button>
+              </div>
+              <p class="detail-card__sub">Live from GBIF for this region's bounding box. These are <em>records people made</em>, not a census of what exists.</p>
+              <div id="livePanel" class="live-panel" aria-live="polite"></div>
+            </div>
+            <div class="detail-card panel panel--inner detail-card--secondary">
+              <div class="detail-card__title-row">
+                <h3>Featured journeys</h3>
+              </div>
+              <div id="routeList" class="route-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <h3 id="placeList" class="subhead">All places in this atlas</h3>
+        <div id="locationCards" class="location-cards"></div>
+      </section>
+
+      <!-- ================================================== ACTIVITIES -->
+      <section id="activities" class="activities panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Step 2 · Choose an activity</p>
+            <h2>Six ways to turn a place into a question</h2>
+            <p>Each card opens in the studio below and keeps the place you selected. Your progress is tracked so you can pick up where you left off.</p>
+          </div>
+          <div class="progress-summary" id="progressSummary" aria-live="polite"></div>
+        </div>
+        <div id="activityGrid" class="activity-grid"></div>
+      </section>
+
+      <!-- ================================================== STUDIO -->
+      <section id="studio" class="studio panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Step 3 · Activity studio</p>
+            <h2>Investigate, compare, and record</h2>
+            <p>The studio always works on one place and one activity. Change either at any time — your notes stay put.</p>
+          </div>
+          <div class="studio-actions">
+            <label class="inline-select">
+              <span>Place</span>
+              <select id="studioPlaceSelect"></select>
+            </label>
+            <label class="inline-select">
+              <span>Activity</span>
+              <select id="studioActivitySelect"></select>
+            </label>
+          </div>
+        </div>
+
+        <div class="studio-grid">
+          <div class="studio-workspace panel panel--inner">
+            <div id="workspaceHeader" class="workspace-header"></div>
+            <div id="workspaceBody" class="workspace-body" aria-live="polite"></div>
+            <div class="workspace-footer">
+              <button id="markComplete" class="button button--light button--small">Mark this activity complete</button>
+              <span id="completeStatus" class="workspace-footer__status" role="status"></span>
+            </div>
+          </div>
+
+          <aside id="notebook" class="field-panel panel panel--inner" aria-label="Field notes notebook">
+            <div class="field-panel__top">
+              <h3>Field Notes Notebook</h3>
+              <p>Notes save to this browser as you type. Nothing is uploaded.</p>
+            </div>
+            <form id="notesForm" class="notes-form" autocomplete="off">
+              <label><span>Title</span><input id="noteTitle" name="title" type="text" placeholder="Ex: Flood memory in the Mississippi Delta"></label>
+              <label><span>Place or source</span><input id="noteLocation" name="location" type="text" placeholder="Ex: Mississippi River Corridor"></label>
+
+              <fieldset class="note-kind">
+                <legend>Is this an observation or an interpretation?</legend>
+                <label class="radio"><input type="radio" name="kind" value="observation" checked> <span><strong>Observation</strong> — what I can point to</span></label>
+                <label class="radio"><input type="radio" name="kind" value="interpretation"> <span><strong>Interpretation</strong> — what I think it means</span></label>
+                <label class="radio"><input type="radio" name="kind" value="question"> <span><strong>Question</strong> — what I still need to check</span></label>
+              </fieldset>
+
+              <label><span>Note</span><textarea id="noteText" name="text" rows="5" placeholder="What did you notice? What questions does this raise?"></textarea></label>
+              <label><span>Source or citation <small>(auto-filled when you save a GBIF record)</small></span><textarea id="noteSource" name="source" rows="2" placeholder="Paste a URL, archive reference, or GBIF citation"></textarea></label>
+
+              <div class="notes-form__row">
+                <label><span>Confidence</span>
+                  <select id="noteConfidence">
+                    <option value="high">High — I can cite this</option>
+                    <option value="medium" selected>Medium — plausible, needs checking</option>
+                    <option value="low">Low — a hunch</option>
+                  </select>
+                </label>
+                <label><span>Tags <small>(comma separated)</small></span><input id="noteTags" type="text" placeholder="water, memory, 1927"></label>
+              </div>
+
+              <div class="notes-form__actions">
+                <button type="submit" class="button button--dark button--small" id="saveNoteButton">Save note</button>
+                <button type="button" class="button button--ghost button--small" id="clearNoteButton">Clear form</button>
+                <span id="noteFormStatus" class="form-status" role="status" aria-live="polite"></span>
+              </div>
+            </form>
+
+            <div class="notes-toolbar">
+              <strong id="notesCount">0 notes</strong>
+              <div class="notes-toolbar__buttons">
+                <button class="button button--light button--small" id="exportHtmlButton"><img src="assets/icons/icon-download.svg" alt=""> Report</button>
+                <button class="button button--light button--small" id="printButton">Print / PDF</button>
+                <button class="button button--ghost button--small" id="exportJsonButton">JSON</button>
+              </div>
+            </div>
+            <div id="notesList" class="notes-list"></div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ================================================== SOURCES -->
+      <section id="sources" class="sources panel panel--split">
+        <div class="sources__intro">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">Step 4 · Know where this came from</p>
+              <h2>Every record shows its source</h2>
+              <p>
+                This atlas mixes three kinds of material, and it labels them differently on purpose:
+                <strong>curated context</strong> written for this project, <strong>live open data</strong> fetched from GBIF,
+                and <strong>your own observations</strong>. Confusing these three is the most common mistake in place-based research.
+              </p>
+            </div>
+          </div>
+          <div class="epistemic-key">
+            <div class="epistemic-key__item"><span class="pill pill--curated">Curated</span><p>Written for this atlas as teaching context. Treat it as a starting point, not a citation.</p></div>
+            <div class="epistemic-key__item"><span class="pill pill--live">Live data</span><p>Fetched from the GBIF API when you load the page. Each record carries its publisher, date, and license.</p></div>
+            <div class="epistemic-key__item"><span class="pill pill--student">Your work</span><p>Your notes. Stored in this browser only, exported only when you press export.</p></div>
+          </div>
+        </div>
+        <div class="sources__cards">
+          <article class="source-card">
+            <h3>GBIF — Global Biodiversity Information Facility</h3>
+            <p>An international network publishing more than three billion species occurrence records from museums, herbaria, research surveys, and citizen-science platforms.</p>
+            <dl>
+              <dt>API</dt><dd><code>api.gbif.org/v1</code> — public, no key required</dd>
+              <dt>Endpoints used</dt><dd>species match, taxonomy, vernacular names, species profiles, occurrence search, year and species facets, still-image media</dd>
+              <dt>License</dt><dd>Varies per record (CC0, CC BY, CC BY-NC). Shown on every record.</dd>
+            </dl>
+            <p class="source-card__cite" id="gbifCitation"></p>
+            <a class="button button--light button--small" href="https://www.gbif.org/citation-guidelines" target="_blank" rel="noopener">GBIF citation guidelines</a>
+          </article>
+          <article class="source-card">
+            <h3>What GBIF records do and do not tell you</h3>
+            <ul class="caveat-list">
+              <li><strong>A record is an observation, not a population.</strong> More records often means more observers, not more animals.</li>
+              <li><strong>Sampling is uneven.</strong> Roadsides, universities, and wealthy countries are heavily sampled; other places are not.</li>
+              <li><strong>Absence is ambiguous.</strong> Zero records may mean the species is gone, was never surveyed, or is recorded under another name.</li>
+              <li><strong>Dates can be approximate.</strong> Old specimens are often assigned to a year or a decade after the fact.</li>
+              <li><strong>Coordinates carry uncertainty.</strong> Many records list a radius in metres; some are georeferenced from a written description.</li>
+            </ul>
+          </article>
+          <article class="source-card">
+            <h3>Privacy for classrooms</h3>
+            <ul class="caveat-list">
+              <li>No account, no login, no analytics, no third-party trackers.</li>
+              <li>Notes live in this browser's <code>localStorage</code> and leave only when you export.</li>
+              <li>The only outbound requests are to GBIF, OpenStreetMap tiles, and Google Fonts.</li>
+              <li>Clearing your browser data clears your notes — export before you finish.</li>
+            </ul>
+            <button class="button button--ghost button--small" id="clearAllData">Erase all my data on this device</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================================================== COMMUNITY -->
+      <section id="community" class="community panel panel--split">
+        <div class="community__quotes">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">For instructors</p>
+              <h2>Assigning this atlas</h2>
+            </div>
+          </div>
+          <div class="quote-grid">
+            <article class="quote-card quote-card--sage">
+              <p><strong>A 45-minute lab.</strong> Assign one place and two activities — usually <em>Species story</em> plus <em>Evidence hunt</em>. Students submit the exported HTML report.</p>
+              <div><strong>What to grade</strong><span>Whether observations are separated from interpretations, and whether every claim carries a source.</span></div>
+            </article>
+            <article class="quote-card quote-card--lavender">
+              <p><strong>A data-literacy discussion.</strong> Have two students compare record counts for the same species in different decades, then explain why the numbers changed.</p>
+              <div><strong>The point</strong><span>Sampling effort is a confound. Learning to see it transfers well beyond ecology.</span></div>
+            </article>
+            <article class="quote-card quote-card--peach">
+              <p><strong>Local fieldwork.</strong> Use the species search to look up what has been recorded within a few kilometres of campus, then go outside and check.</p>
+              <div><strong>The payoff</strong><span>Students find both matches and absences, and both are worth writing about.</span></div>
+            </article>
+          </div>
+        </div>
+        <div class="community__art panel panel--inner">
+          <img src="assets/images/community-journey.jpg" alt="Students standing on a ridge and looking out over a river valley.">
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer panel panel--footer">
+      <div class="footer-brand">
+        <div class="brand brand--footer">
+          <img src="assets/icons/logo-landscape.svg" alt="" class="brand__logo">
+          <div>
+            <div class="brand__title">Eco Ethnography Atlas</div>
+            <div class="brand__subtitle">An open, account-free learning environment</div>
+          </div>
+        </div>
+        <p>An interactive learning platform for exploring the connections between people, place, memory, and the living world.</p>
+        <div class="socials" aria-hidden="true">
+          <span class="social-icon"><img src="assets/icons/icon-globe.svg" alt=""></span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Explore</h4>
+          <a href="#explore">World map</a>
+          <a href="#activities">Activities</a>
+          <a href="#studio">Studio</a>
+          <a href="#notebook">Field notes</a>
+        </div>
+        <div>
+          <h4>Data &amp; rights</h4>
+          <a href="#sources">Sources and caveats</a>
+          <a href="https://www.gbif.org" target="_blank" rel="noopener">GBIF</a>
+          <a href="https://www.gbif.org/terms" target="_blank" rel="noopener">GBIF terms of use</a>
+          <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>
+        </div>
+        <div class="footer-card panel panel--inner">
+          <div class="footer-card__content">
+            <h4>Adapting this atlas</h4>
+            <p>Places, species, and journeys all live in <code>data/atlas-db.json</code>. Add a place with a bounding box and a GBIF taxon key and the live layer works immediately.</p>
+            <a href="data/atlas-db.json" class="button button--dark button--small">View the data file</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="gbif.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
