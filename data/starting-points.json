@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "version": "3.0",
+    "updated": "2026-07-25",
+    "scope": "United States",
+    "note": "Starting points only. The real subject of this site is the circle a student draws, anywhere in the country."
+  },
+  "groups": [
+    { "id": "birds",      "label": "Birds",              "emoji": "🐦", "taxonKeys": [212],                     "match": { "class": ["Aves"] } },
+    { "id": "mammals",    "label": "Mammals",            "emoji": "🦌", "taxonKeys": [359],                     "match": { "class": ["Mammalia"] } },
+    { "id": "plants",     "label": "Plants",             "emoji": "🌿", "taxonKeys": [6],                       "match": { "kingdom": ["Plantae"] } },
+    { "id": "insects",    "label": "Insects",            "emoji": "🦋", "taxonKeys": [216],                     "match": { "class": ["Insecta"] } },
+    { "id": "reptiles",   "label": "Reptiles",           "emoji": "🐢", "taxonKeys": [11592253, 11418114, 11493978], "match": { "class": ["Squamata", "Testudines", "Crocodylia"] } },
+    { "id": "amphibians", "label": "Amphibians",         "emoji": "🐸", "taxonKeys": [131],                     "match": { "class": ["Amphibia"] } },
+    { "id": "fish",       "label": "Fish",               "emoji": "🐟", "taxonKeys": [],                        "match": { "phylumNoClass": true } },
+    { "id": "fungi",      "label": "Fungi & lichens",    "emoji": "🍄", "taxonKeys": [5],                       "match": { "kingdom": ["Fungi"] } },
+    { "id": "spiders",    "label": "Spiders & kin",      "emoji": "🕷️", "taxonKeys": [367],                     "match": { "class": ["Arachnida"] } },
+    { "id": "other",      "label": "Everything else",    "emoji": "🐌", "taxonKeys": [],                        "match": { "fallback": true } }
+  ],
+  "startingPoints": [
+    {
+      "id": "mississippi-delta",
+      "name": "The Mississippi Delta",
+      "place": "Helena, Arkansas",
+      "coords": [34.5293, -90.5915],
+      "radiusKm": 25,
+      "biome": "Floodplain and bottomland forest",
+      "invitation": "A river that moved cotton, blues music, and floodwater — and is still moving all three.",
+      "look": "Levees, oxbow lakes, cypress, and farmland that used to be swamp."
+    },
+    {
+      "id": "everglades",
+      "name": "The Everglades",
+      "place": "Homestead, Florida",
+      "coords": [25.5, -80.75],
+      "radiusKm": 30,
+      "biome": "Subtropical wetland",
+      "invitation": "A river sixty miles wide and six inches deep, drained and half re-flooded within one lifetime.",
+      "look": "Sawgrass to the horizon, hardwood hammocks, and canals cut straight as rulers."
+    },
+    {
+      "id": "sonoran",
+      "name": "The Sonoran Desert",
+      "place": "Tucson, Arizona",
+      "coords": [32.2217, -110.9265],
+      "radiusKm": 30,
+      "biome": "Hot desert",
+      "invitation": "One of the most biodiverse deserts on earth, and one of the fastest-warming cities in the country.",
+      "look": "Saguaro, ocotillo, dry washes that flood in minutes, mountains on every side."
+    },
+    {
+      "id": "smokies",
+      "name": "The Great Smoky Mountains",
+      "place": "Gatlinburg, Tennessee",
+      "coords": [35.6532, -83.5070],
+      "radiusKm": 25,
+      "biome": "Southern Appalachian forest",
+      "invitation": "More salamander species than anywhere else on the planet, in mountains people were removed from to make a park.",
+      "look": "Fog in the coves, old-growth stands, rhododendron thickets, cold streams."
+    },
+    {
+      "id": "puget-sound",
+      "name": "Puget Sound",
+      "place": "Seattle, Washington",
+      "coords": [47.6062, -122.3321],
+      "radiusKm": 25,
+      "biome": "Temperate rainforest and inland sea",
+      "invitation": "Salmon, orcas, ports, and dams — a food web and a shipping lane sharing the same water.",
+      "look": "Douglas fir, tide flats, ferry wakes, mountains behind the skyline."
+    },
+    {
+      "id": "chesapeake",
+      "name": "The Chesapeake Bay",
+      "place": "Annapolis, Maryland",
+      "coords": [38.9784, -76.4922],
+      "radiusKm": 25,
+      "biome": "Estuary",
+      "invitation": "The largest estuary in the country, fed by farm runoff from six states and worked by watermen for centuries.",
+      "look": "Marsh grass, crab pots, eroding islands, blue herons on every dock."
+    },
+    {
+      "id": "flint-hills",
+      "name": "The Flint Hills Prairie",
+      "place": "Manhattan, Kansas",
+      "coords": [38.8536, -96.6031],
+      "radiusKm": 30,
+      "biome": "Tallgrass prairie",
+      "invitation": "The last large piece of tallgrass prairie left — ninety-six percent of it is gone.",
+      "look": "Grass over your head in August, burned black in April, limestone under everything."
+    },
+    {
+      "id": "sleeping-bear",
+      "name": "The Great Lakes Dunes",
+      "place": "Empire, Michigan",
+      "coords": [44.8080, -86.0586],
+      "radiusKm": 25,
+      "biome": "Freshwater dune and northern forest",
+      "invitation": "Freshwater so big it makes weather, with dunes piled four hundred feet above it.",
+      "look": "Beech-maple forest, perched dunes, water that turns turquoise over sandbars."
+    },
+    {
+      "id": "interior-alaska",
+      "name": "The Yukon River Basin",
+      "place": "Fairbanks, Alaska",
+      "coords": [64.8378, -147.7164],
+      "radiusKm": 40,
+      "biome": "Boreal forest and permafrost",
+      "invitation": "Ground that has stayed frozen for millennia is thawing, and the salmon runs are arriving at the wrong time.",
+      "look": "Black spruce leaning at angles, braided rivers, thaw ponds, twenty-one hours of June light."
+    },
+    {
+      "id": "rio-grande",
+      "name": "The Lower Rio Grande Valley",
+      "place": "Brownsville, Texas",
+      "coords": [26.0, -97.5],
+      "radiusKm": 30,
+      "biome": "Subtropical thorn forest",
+      "invitation": "Birds from two continents funnel through here, across a river that is also a border with a wall on it.",
+      "look": "Thorn scrub, resacas, citrus groves, and species found nowhere else in the country."
+    }
+  ],
+  "sections": [
+    {
+      "id": "place",
+      "title": "The place",
+      "lead": "Put your reader inside the circle you drew.",
+      "prompts": [
+        "Where is this circle, and why did you put it there?",
+        "What does it look like — landforms, water, plants, buildings, roads?",
+        "What would you hear and smell standing in the middle of it?",
+        "Who lives here, works here, or passes through?"
+      ],
+      "minWords": 120
+    },
+    {
+      "id": "neighbors",
+      "title": "Who lives here",
+      "lead": "Write about the species you collected. Three is plenty — depth beats a list.",
+      "prompts": [
+        "For each species: what does it need from this place to survive?",
+        "What relationship do people here have with it — food, work, danger, nuisance, symbol, law?",
+        "Which of your species would notice first if this place changed?",
+        "Which one surprised you, and why did you expect something else?"
+      ],
+      "minWords": 200
+    },
+    {
+      "id": "evidence",
+      "title": "What the data shows — and what it hides",
+      "lead": "Every record in your circle is something a person chose to write down.",
+      "prompts": [
+        "Who made the records in your circle — museums, scientists, or people with phones?",
+        "Where are the records clustered, and what does that tell you about observers rather than organisms?",
+        "What did you expect to find that was not there? What might explain the absence?",
+        "What season are most records from, and how would that skew your picture?"
+      ],
+      "minWords": 150
+    },
+    {
+      "id": "voices",
+      "title": "Who else knows this place",
+      "lead": "Occurrence records are one kind of knowledge. They are not the only kind.",
+      "prompts": [
+        "Who has known this place longest, and how is their knowledge held — story, practice, language, ceremony?",
+        "Whose work depends on reading this place accurately: farmers, fishers, firefighters, nurses, roofers?",
+        "What would a person who grew up here tell you that no database contains?",
+        "Who has been displaced from or excluded from this place?"
+      ],
+      "minWords": 150
+    },
+    {
+      "id": "questions",
+      "title": "What I still want to find out",
+      "lead": "End with the question, not the conclusion. Name what would answer it.",
+      "prompts": [
+        "What is the single thing you most want to know about this place now?",
+        "What evidence would answer it — a record, a person, a visit, a season of watching?",
+        "What would you go outside and check tomorrow?",
+        "What would change your mind about anything you wrote above?"
+      ],
+      "minWords": 100
+    }
+  ]
+}

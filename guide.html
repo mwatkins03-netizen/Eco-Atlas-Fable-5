@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reading the data — Ecography</title>
+<meta name="description" content="Where Ecography's biodiversity data comes from, what it can and cannot tell you, and how student privacy is handled.">
+<link rel="icon" href="assets/icons/logo-landscape.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to the content</a>
+
+<div class="page-shell">
+  <header id="siteHeader" class="site-header panel"></header>
+
+  <main id="main">
+    <section class="section panel">
+      <div class="section-head">
+        <p class="eyebrow">Before you cite anything</p>
+        <h1>Reading the data</h1>
+        <p>
+          Every number in this site comes from GBIF, the Global Biodiversity Information Facility.
+          Knowing what those numbers are actually counting is the difference between a good
+          ecography and a confident wrong one.
+        </p>
+      </div>
+
+      <div class="split">
+        <div class="panel panel--inner section">
+          <span class="pill pill--live">Live data</span>
+          <h2 style="margin-top:14px">What GBIF is</h2>
+          <p>
+            An international network that publishes species occurrence records — more than three
+            billion of them. A record says: <em>this species was here, on this date, according to
+            this person or institution.</em>
+          </p>
+          <p>The records come from natural history museums digitising century-old drawers, from
+          university field surveys, from government monitoring programmes, from bird counts, and —
+          in enormous and growing numbers — from members of the public photographing things with
+          their phones.</p>
+          <p style="margin-bottom:0"><a href="https://www.gbif.org" target="_blank" rel="noopener">gbif.org →</a></p>
+        </div>
+
+        <div class="panel panel--inner section">
+          <span class="pill pill--student">Your work</span>
+          <h2 style="margin-top:14px">What stays private</h2>
+          <ul class="caveat-list">
+            <li>No account, no login, no analytics, no third-party trackers.</li>
+            <li>Your circle, your collected species, and your writing live in this browser's
+            local storage and are sent nowhere until you press export.</li>
+            <li>If you use <strong>Use my location</strong>, the coordinate is used to centre the
+            map and query GBIF, stored on this device, and shared with no one.</li>
+            <li>Outbound requests go only to GBIF, OpenStreetMap tiles, and Google Fonts.</li>
+            <li>Clearing your browser data clears your work. <strong>Export before you finish.</strong></li>
+          </ul>
+          <p style="margin:20px 0 0">
+            <button class="button button--ghost" id="eraseButton">Erase everything on this device</button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section panel">
+      <div class="section-head">
+        <h2>Five things a record count cannot tell you</h2>
+        <p>Read these before you write a sentence that starts "the data shows".</p>
+      </div>
+
+      <div class="grid grid--auto">
+        <div class="callout callout--sage">
+          <h3 style="margin-top:0">1. It is not a population</h3>
+          <p style="margin-bottom:0">A thousand records of a robin and four of a salamander does
+          not mean there are more robins. It means robins are loud, daytime, and easy to photograph,
+          and salamanders are under a log at night.</p>
+        </div>
+        <div class="callout callout--peach">
+          <h3 style="margin-top:0">2. Sampling is wildly uneven</h3>
+          <p style="margin-bottom:0">Records cluster along roads, trails, campuses, and coastlines,
+          and in wealthier countries and neighbourhoods. The map of records is partly a map of who
+          had leisure time, transport, and a smartphone.</p>
+        </div>
+        <div class="callout callout--sage">
+          <h3 style="margin-top:0">3. Absence is ambiguous</h3>
+          <p style="margin-bottom:0">Zero records can mean locally extinct, never surveyed, never
+          digitised, or recorded under a different scientific name. Four very different stories,
+          one identical number.</p>
+        </div>
+        <div class="callout callout--peach">
+          <h3 style="margin-top:0">4. The past is thin, and getting thinner backwards</h3>
+          <p style="margin-bottom:0">Almost every place shows a steep rise in records after about
+          1990. That is databases and phone apps arriving, not life arriving. Old records are often
+          dated to a year or a decade after the fact.</p>
+        </div>
+        <div class="callout callout--sage">
+          <h3 style="margin-top:0">5. Coordinates carry uncertainty</h3>
+          <p style="margin-bottom:0">Many records list an accuracy radius in metres. Some were
+          georeferenced decades later from a written description like "6 miles north of town".
+          A dot on a map looks more certain than it is.</p>
+        </div>
+        <div class="callout callout--peach">
+          <h3 style="margin-top:0">And one thing it is very good for</h3>
+          <p style="margin-bottom:0">Asking better questions. A surprising absence, an odd cluster,
+          a season that does not match what you have seen with your own eyes — those are the
+          starting points for real inquiry.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section panel">
+      <div class="section-head">
+        <h2>Citing this properly</h2>
+        <p>Your exported ecography includes these automatically, but you should understand them.</p>
+      </div>
+
+      <div class="panel panel--inner section">
+        <h3>The search you ran</h3>
+        <p class="data-note">
+          GBIF asks that you cite the search itself, with the date, because the database changes daily:
+        </p>
+        <p><code>GBIF.org (YYYY-MM-DD) GBIF Occurrence Search. https://www.gbif.org/occurrence/search</code></p>
+
+        <h3 style="margin-top:26px">The individual records</h3>
+        <p class="data-note">
+          Each record belongs to the institution or person who published it, and carries its own
+          license — often CC0, CC BY, or CC BY-NC. Photographs are licensed separately from the
+          record. <strong>CC BY-NC images cannot be used commercially</strong>, which includes some
+          school publishing. Every photo in this site shows its photographer and license.
+        </p>
+        <p style="margin-bottom:0">
+          <a href="https://www.gbif.org/citation-guidelines" target="_blank" rel="noopener">
+            GBIF's full citation guidelines →</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section panel">
+      <div class="section-head">
+        <h2>For instructors</h2>
+      </div>
+      <div class="grid grid--auto">
+        <div class="panel panel--inner section">
+          <h3 style="margin-top:0">A 60-minute lab</h3>
+          <p>Assign one circle around campus or the student's hometown, three collected species,
+          and sections 1, 2, and 3. Students submit the exported HTML.</p>
+          <p style="margin-bottom:0"><strong>What to grade:</strong> whether every claim about the
+          place is separated from every claim about the data.</p>
+        </div>
+        <div class="panel panel--inner section">
+          <h3 style="margin-top:0">A data-literacy discussion</h3>
+          <p>Have two students draw circles of the same size — one over a city park, one over
+          farmland or forest — and compare record counts.</p>
+          <p style="margin-bottom:0"><strong>The point:</strong> the difference is mostly observers.
+          Recognising sampling bias transfers far beyond ecology.</p>
+        </div>
+        <div class="panel panel--inner section">
+          <h3 style="margin-top:0">Fieldwork that closes the loop</h3>
+          <p>Students draw a small circle around somewhere they can physically walk, list five
+          species the data predicts, then go and check.</p>
+          <p style="margin-bottom:0"><strong>The payoff:</strong> both matches and misses are
+          worth writing about, and section 5 is built for exactly that.</p>
+        </div>
+        <div class="panel panel--inner section">
+          <h3 style="margin-top:0">Adapting the site</h3>
+          <p>Starting points, group definitions, and the writing prompts all live in
+          <code>data/starting-points.json</code>. Edit that file to change the assignment — no
+          code changes needed.</p>
+          <p style="margin-bottom:0">The whole site is static: no build step, no server, no keys.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="siteFooter" class="site-footer panel"></footer>
+</div>
+
+<script src="js/gbif.js"></script>
+<script src="js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('eraseButton').addEventListener('click', () => {
+    if (!confirm('Erase your circle, your collected species, and everything you have written on this device? Export first if you want a copy.')) return;
+    Store.eraseEverything();
+    toast('Everything erased. Reloading…');
+    setTimeout(() => location.reload(), 900);
+  });
+});
+</script>
+</body>
+</html>

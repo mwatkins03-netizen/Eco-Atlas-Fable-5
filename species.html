@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet who lives there — Ecography</title>
+<meta name="description" content="A photo field guide built from the biodiversity records inside your circle.">
+<link rel="icon" href="assets/icons/logo-landscape.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#guideGrid">Skip to the species list</a>
+
+<div class="page-shell">
+  <header id="siteHeader" class="site-header panel"></header>
+
+  <main id="main">
+    <section class="section panel" id="guidePanel">
+      <div class="section-head section-head--row">
+        <div>
+          <p class="eyebrow">Step 2 of 3</p>
+          <h1>Meet who lives there</h1>
+          <p id="placeLine">Loading your circle…</p>
+        </div>
+        <div>
+          <p class="guide-status" id="collectedLine"></p>
+        </div>
+      </div>
+
+      <div class="guide-toolbar">
+        <div class="group-chips" id="groupChips" role="group" aria-label="Filter by kind of life"></div>
+        <p class="guide-status" id="guideStatus" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="field-grid" id="guideGrid"></div>
+
+      <div id="guideFooter" style="margin-top:26px"></div>
+    </section>
+
+    <section class="sticky-actions panel" id="continueBar" hidden>
+      <span id="continueText"></span>
+      <a class="button button--dark button--large" href="write.html">Write your ecography →</a>
+    </section>
+  </main>
+
+  <footer id="siteFooter" class="site-footer panel"></footer>
+</div>
+
+<!-- species detail -->
+<dialog id="sheet" class="sheet" aria-labelledby="sheetTitle">
+  <div class="sheet__inner">
+    <div id="sheetContent"></div>
+  </div>
+</dialog>
+
+<script src="js/gbif.js"></script>
+<script src="js/app.js"></script>
+<script src="js/species.js"></script>
+</body>
+</html>
