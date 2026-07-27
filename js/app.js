@@ -101,6 +101,14 @@ const Store = {
     found.note = note;
     writeJSON(KEYS.species, list);
   },
+  // Wikipedia arrives after a species may already be collected, so backfill it.
+  updateSpeciesWiki(key, wiki) {
+    const list = this.getSpecies();
+    const found = list.find(s => s.speciesKey === key);
+    if (!found || found.wiki) return;
+    found.wiki = wiki;
+    writeJSON(KEYS.species, list);
+  },
 
   getWriting() { return readJSON(KEYS.writing, {}); },
   setSection(id, text) {

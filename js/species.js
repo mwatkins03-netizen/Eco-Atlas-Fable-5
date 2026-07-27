@@ -28,7 +28,7 @@ async function init() {
 
   $('#placeLine').innerHTML =
     `Everything below has been recorded inside <strong>${esc(circleLabel(circle))}</strong> —
-     a ${circle.radiusKm} km circle centred on ${circle.lat.toFixed(3)}, ${circle.lng.toFixed(3)}.
+     a ${circle.radiusKm} km circle centered on ${circle.lat.toFixed(3)}, ${circle.lng.toFixed(3)}.
      <a href="explore.html">Change your circle</a>`;
 
   renderCollectedLine();
@@ -170,11 +170,14 @@ async function openSheet(speciesKey) {
     <div class="sheet__body">
       <h2 id="sheetTitle">${esc(name)}</h2>
       <p class="sheet__sci">${esc(entry.scientificName)}</p>
+      <div id="sheetWiki">${loadingBlock('Reading the Wikipedia entry…')}</div>
       <div id="sheetFacts">${loadingBlock('Looking this species up on GBIF…')}</div>
     </div>`;
 
   content.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => sheet.close()));
   if (typeof sheet.showModal === 'function') sheet.showModal(); else sheet.setAttribute('open', '');
+
+  loadWikipedia(entry);
 
   const [taxonRes, vernRes, profileRes, localRes, globalRes, seasonRes] = await Promise.all([
     GBIF.taxon(speciesKey),
@@ -245,6 +248,65 @@ async function openSheet(speciesKey) {
   loadSheetRecords(speciesKey);
 }
 
+/* ----------------------------------------------------- what this thing is */
+
+// GBIF says a species was here. Wikipedia says what it actually is, which is
+// the part a student can write a sentence about.
+async function loadWikipedia(entry) {
+  const target = $('#sheetWiki');
+  if (!target) return;
+
+  const res = await Wiki.lookupSpecies({
+    scientificName: entry.scientificName,
+    vernacularName: entry.vernacularName
+  });
+  const box = $('#sheetWiki');
+  if (!box) return; // sheet was closed
+
+  if (!res.ok) {
+    box.innerHTML = `<div class="wiki-card wiki-card--empty">
+      <p class="data-note" style="margin:0">
+        No Wikipedia article found for this one — which happens with less-studied species.
+        You can still search it:
+        <a href="https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(entry.scientificName || '')}"
+           target="_blank" rel="noopener">look up ${esc(entry.scientificName)} →</a>
+      </p>
+    </div>`;
+    entry.wiki = null;
+    Store.updateSpeciesWiki(entry.speciesKey, null);
+    return;
+  }
+
+  const w = res.data;
+  box.innerHTML = `
+    <div class="wiki-card">
+      <div class="wiki-card__head">
+        <span class="wiki-card__mark" aria-hidden="true">W</span>
+        <div>
+          <h3>${esc(w.title)}</h3>
+          ${w.description ? `<p class="wiki-card__desc">${esc(w.description)}</p>` : ''}
+        </div>
+      </div>
+      <div class="wiki-card__body">
+        ${w.thumbnail ? `<img class="wiki-card__thumb" src="${esc(w.thumbnail)}" alt="" loading="lazy">` : ''}
+        <p class="wiki-card__lede">${esc(w.lede)}</p>
+      </div>
+      <details class="wiki-card__more">
+        <summary>Read a bit more</summary>
+        <p>${esc(w.extract)}</p>
+      </details>
+      <p class="wiki-card__foot">
+        <a href="${esc(w.url)}" target="_blank" rel="noopener">Read the full article on Wikipedia →</a>
+        <span class="data-note">Text from Wikipedia, CC BY-SA 4.0</span>
+      </p>
+    </div>`;
+
+  // Remember it on the entry so collecting the species carries it into the
+  // export, and so an already-collected species gets backfilled.
+  entry.wiki = { title: w.title, description: w.description, lede: w.lede, url: w.url };
+  Store.updateSpeciesWiki(entry.speciesKey, entry.wiki);
+}
+
 function wireCollectButton(entry, extra) {
   const button = $('#collectButton');
   const note = $('#speciesNote');
@@ -274,6 +336,7 @@ function wireCollectButton(entry, extra) {
         family: extra.family || entry.family,
         className: extra.className || entry.className,
         localCount: extra.localCount,
+        wiki: entry.wiki || null,
         image: entry.image,
         citation: entry.exampleRecord ? GBIF.citeOccurrence(entry.exampleRecord) : null,
         note: note.value.trim()

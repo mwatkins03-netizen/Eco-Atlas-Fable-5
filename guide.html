@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to the content</a>
@@ -38,8 +38,8 @@
             billion of them. A record says: <em>this species was here, on this date, according to
             this person or institution.</em>
           </p>
-          <p>The records come from natural history museums digitising century-old drawers, from
-          university field surveys, from government monitoring programmes, from bird counts, and —
+          <p>The records come from natural history museums digitizing century-old drawers, from
+          university field surveys, from government monitoring programs, from bird counts, and —
           in enormous and growing numbers — from members of the public photographing things with
           their phones.</p>
           <p style="margin-bottom:0"><a href="https://www.gbif.org" target="_blank" rel="noopener">gbif.org →</a></p>
@@ -52,9 +52,13 @@
             <li>No account, no login, no analytics, no third-party trackers.</li>
             <li>Your circle, your collected species, and your writing live in this browser's
             local storage and are sent nowhere until you press export.</li>
-            <li>If you use <strong>Use my location</strong>, the coordinate is used to centre the
+            <li>If you use <strong>Use my location</strong>, the coordinate is used to center the
             map and query GBIF, stored on this device, and shared with no one.</li>
-            <li>Outbound requests go only to GBIF, OpenStreetMap tiles, and Google Fonts.</li>
+            <li>Outbound requests go only to GBIF (species records), Wikipedia (species
+            descriptions), OpenStreetMap (map tiles and town search), and Google Fonts. None of
+            them receive your writing.</li>
+            <li>Searching for a town sends that search text to OpenStreetMap's geocoder. It is the
+            only thing you type that ever leaves the device.</li>
             <li>Clearing your browser data clears your work. <strong>Export before you finish.</strong></li>
           </ul>
           <p style="margin:20px 0 0">
@@ -80,13 +84,13 @@
         <div class="callout callout--peach">
           <h3 style="margin-top:0">2. Sampling is wildly uneven</h3>
           <p style="margin-bottom:0">Records cluster along roads, trails, campuses, and coastlines,
-          and in wealthier countries and neighbourhoods. The map of records is partly a map of who
+          and in wealthier countries and neighborhoods. The map of records is partly a map of who
           had leisure time, transport, and a smartphone.</p>
         </div>
         <div class="callout callout--sage">
           <h3 style="margin-top:0">3. Absence is ambiguous</h3>
           <p style="margin-bottom:0">Zero records can mean locally extinct, never surveyed, never
-          digitised, or recorded under a different scientific name. Four very different stories,
+          digitized, or recorded under a different scientific name. Four very different stories,
           one identical number.</p>
         </div>
         <div class="callout callout--peach">
@@ -97,7 +101,7 @@
         </div>
         <div class="callout callout--sage">
           <h3 style="margin-top:0">5. Coordinates carry uncertainty</h3>
-          <p style="margin-bottom:0">Many records list an accuracy radius in metres. Some were
+          <p style="margin-bottom:0">Many records list an accuracy radius in meters. Some were
           georeferenced decades later from a written description like "6 miles north of town".
           A dot on a map looks more certain than it is.</p>
         </div>
@@ -123,6 +127,16 @@
         </p>
         <p><code>GBIF.org (YYYY-MM-DD) GBIF Occurrence Search. https://www.gbif.org/occurrence/search</code></p>
 
+        <h3 style="margin-top:26px">The Wikipedia descriptions</h3>
+        <p class="data-note">
+          Each species card pulls the opening of its Wikipedia article so you can find out what the
+          thing actually is. Wikipedia text is licensed
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>,
+          and your exported ecography credits it automatically. Wikipedia is a fine place to start
+          and a poor place to stop — if you use a fact from it in your writing, follow its footnote
+          to the original source.
+        </p>
+
         <h3 style="margin-top:26px">The individual records</h3>
         <p class="data-note">
           Each record belongs to the institution or person who published it, and carries its own
@@ -143,25 +157,26 @@
       </div>
       <div class="grid grid--auto">
         <div class="panel panel--inner section">
-          <h3 style="margin-top:0">A 60-minute lab</h3>
-          <p>Assign one circle around campus or the student's hometown, three collected species,
-          and sections 1, 2, and 3. Students submit the exported HTML.</p>
-          <p style="margin-bottom:0"><strong>What to grade:</strong> whether every claim about the
-          place is separated from every claim about the data.</p>
+          <h3 style="margin-top:0">A first-week freewrite</h3>
+          <p>Assign one circle around campus or the student's hometown, two or three collected
+          species, and all three writing sections. Roughly 45–60 minutes. Students submit the
+          exported HTML.</p>
+          <p style="margin-bottom:0"><strong>What to grade:</strong> specificity. Whether the
+          reader can picture the place, and whether the species are described rather than listed.</p>
         </div>
         <div class="panel panel--inner section">
           <h3 style="margin-top:0">A data-literacy discussion</h3>
           <p>Have two students draw circles of the same size — one over a city park, one over
           farmland or forest — and compare record counts.</p>
           <p style="margin-bottom:0"><strong>The point:</strong> the difference is mostly observers.
-          Recognising sampling bias transfers far beyond ecology.</p>
+          Recognizing sampling bias transfers far beyond ecology.</p>
         </div>
         <div class="panel panel--inner section">
           <h3 style="margin-top:0">Fieldwork that closes the loop</h3>
           <p>Students draw a small circle around somewhere they can physically walk, list five
           species the data predicts, then go and check.</p>
           <p style="margin-bottom:0"><strong>The payoff:</strong> both matches and misses are
-          worth writing about, and section 5 is built for exactly that.</p>
+          worth writing about, and the third section is built for exactly that.</p>
         </div>
         <div class="panel panel--inner section">
           <h3 style="margin-top:0">Adapting the site</h3>
@@ -177,8 +192,8 @@
   <footer id="siteFooter" class="site-footer panel"></footer>
 </div>
 
-<script src="js/gbif.js"></script>
-<script src="js/app.js"></script>
+<script src="js/gbif.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('eraseButton').addEventListener('click', () => {

@@ -123,60 +123,36 @@
     {
       "id": "place",
       "title": "The place",
-      "lead": "Put your reader inside the circle you drew.",
+      "lead": "Put your reader inside the circle you drew. Write like you are describing it to someone who has never been.",
       "prompts": [
         "Where is this circle, and why did you put it there?",
-        "What does it look like — landforms, water, plants, buildings, roads?",
+        "What does it look like — hills, water, trees, fields, buildings, roads?",
         "What would you hear and smell standing in the middle of it?",
-        "Who lives here, works here, or passes through?"
+        "Who spends time here — and when are they here?"
       ],
       "minWords": 120
     },
     {
       "id": "neighbors",
       "title": "Who lives here",
-      "lead": "Write about the species you collected. Three is plenty — depth beats a list.",
+      "lead": "Pick two or three of the species you collected and introduce them. Read their Wikipedia entry first — it is right there on each species card.",
       "prompts": [
-        "For each species: what does it need from this place to survive?",
-        "What relationship do people here have with it — food, work, danger, nuisance, symbol, law?",
-        "Which of your species would notice first if this place changed?",
-        "Which one surprised you, and why did you expect something else?"
-      ],
-      "minWords": 200
-    },
-    {
-      "id": "evidence",
-      "title": "What the data shows — and what it hides",
-      "lead": "Every record in your circle is something a person chose to write down.",
-      "prompts": [
-        "Who made the records in your circle — museums, scientists, or people with phones?",
-        "Where are the records clustered, and what does that tell you about observers rather than organisms?",
-        "What did you expect to find that was not there? What might explain the absence?",
-        "What season are most records from, and how would that skew your picture?"
-      ],
-      "minWords": 150
-    },
-    {
-      "id": "voices",
-      "title": "Who else knows this place",
-      "lead": "Occurrence records are one kind of knowledge. They are not the only kind.",
-      "prompts": [
-        "Who has known this place longest, and how is their knowledge held — story, practice, language, ceremony?",
-        "Whose work depends on reading this place accurately: farmers, fishers, firefighters, nurses, roofers?",
-        "What would a person who grew up here tell you that no database contains?",
-        "Who has been displaced from or excluded from this place?"
+        "What is it, in your own words? Say it the way you would to a friend.",
+        "Where in your circle would you actually run into it — a tree, the water, the sky, under a rock?",
+        "Have you ever seen one? If yes, describe it. If no, what did you picture before you looked it up?",
+        "Which one surprised you most, and what surprised you about it?"
       ],
       "minWords": 150
     },
     {
       "id": "questions",
       "title": "What I still want to find out",
-      "lead": "End with the question, not the conclusion. Name what would answer it.",
+      "lead": "End with a question instead of a conclusion. Good writing usually does.",
       "prompts": [
-        "What is the single thing you most want to know about this place now?",
-        "What evidence would answer it — a record, a person, a visit, a season of watching?",
+        "What is the one thing you most want to know about this place now?",
+        "What could you do to find out — look something up, ask someone, go and stand there?",
         "What would you go outside and check tomorrow?",
-        "What would change your mind about anything you wrote above?"
+        "What did you believe about this place before today that you are less sure of now?"
       ],
       "minWords": 100
     }

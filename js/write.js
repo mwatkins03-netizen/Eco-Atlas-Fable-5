@@ -1,5 +1,5 @@
 /* =====================================================================
-   write.js — step 3. Five guided sections, the student's collected
+   write.js — step 3. Three guided sections, the student's collected
    species alongside, and an export they can hand in.
    ===================================================================== */
 
@@ -25,7 +25,7 @@ async function init() {
 
   $('#title').textContent = circle.name ? `An ecography of ${circle.name}` : 'Write your ecography';
   $('#placeLine').innerHTML =
-    `Five short sections. Write them in any order — everything saves as you type.
+    `Three short sections. Write them in any order — everything saves as you type.
      Your place is <strong>${esc(circleLabel(circle))}</strong>.
      <a href="explore.html">Change it</a> · <a href="species.html">collect more species</a>`;
 
@@ -111,7 +111,7 @@ function renderCircleCard() {
   $('#circleCard').innerHTML = `
     <p style="margin-bottom:10px"><strong>${esc(circleLabel(circle))}</strong></p>
     <p class="data-note" style="margin-bottom:12px">
-      ${circle.radiusKm} km radius · centred on ${circle.lat.toFixed(4)}, ${circle.lng.toFixed(4)}
+      ${circle.radiusKm} km radius · centered on ${circle.lat.toFixed(4)}, ${circle.lng.toFixed(4)}
       ${circle.biome ? `<br>${esc(circle.biome)}` : ''}
     </p>
     <div id="scatterHolder"></div>
@@ -187,7 +187,9 @@ function renderTray() {
       <div class="tray-item__text">
         <div class="tray-item__name">${esc(s.vernacularName || s.scientificName)}</div>
         <div class="tray-item__sci">${esc(s.scientificName)}</div>
+        ${s.wiki && s.wiki.description ? `<div class="tray-item__desc">${esc(s.wiki.description)}</div>` : ''}
         ${s.note ? `<div class="data-note" style="margin-top:4px">${esc(s.note)}</div>` : ''}
+        ${s.wiki ? `<a class="tray-item__link" href="${esc(s.wiki.url)}" target="_blank" rel="noopener">Wikipedia →</a>` : ''}
       </div>
     </div>`).join('');
 }
@@ -250,6 +252,8 @@ function exportDocument() {
   .species strong { display: block; line-height: 1.25; }
   .species em { color: var(--muted); font-size: .88rem; }
   .species p { font-size: .9rem; color: var(--muted); margin: 8px 0 0; }
+  .species .desc { font-style: italic; margin-top: 4px; }
+  .species .link { font-size: .82rem; }
   footer { margin-top: 46px; padding-top: 22px; border-top: 2px solid var(--rule); color: var(--muted); font-size: .86rem; }
   footer p { margin: 0 0 .7em; overflow-wrap: anywhere; }
   @media print {
@@ -286,7 +290,9 @@ function exportDocument() {
           <div>
             <strong>${esc(s.vernacularName || s.scientificName)}</strong>
             <em>${esc(s.scientificName)}</em>
+            ${s.wiki && s.wiki.description ? `<p class="desc">${esc(s.wiki.description)}</p>` : ''}
             ${s.note ? `<p>${esc(s.note)}</p>` : ''}
+            ${s.wiki ? `<p class="link"><a href="${esc(s.wiki.url)}">${esc(s.wiki.title)} on Wikipedia</a></p>` : ''}
           </div>
         </div>`).join('')}
     </div>` : ''}
@@ -296,6 +302,8 @@ function exportDocument() {
     <p>Biodiversity records: ${esc(GBIF.citeCircle(circle, circle.name))}</p>
     <p>Each occurrence record and photograph carries its own license from the institution or person
        who published it. Check the individual record before republishing an image.</p>
+    ${species.some(s => s.wiki) ? `<p>Species descriptions adapted from Wikipedia, licensed
+       <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>` : ''}
     ${species.filter(s => s.citation).length ? `
       <p><strong>Example records for the species above:</strong></p>
       ${species.filter(s => s.citation).map(s => `<p>${esc(s.citation)}</p>`).join('')}` : ''}
